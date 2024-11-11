@@ -21,22 +21,35 @@ function displayResult(computerMove, playerMove) {
     } else if ((computerMove == 'rock' && playerMove == 'paper')
         || (computerMove == 'paper' && playerMove == 'scissors')
         || (computerMove == 'scissors' && playerMove == 'rock')) {
-        printMessage('Player won!');
+        printMessage('Player won the round!');
     } else if ((computerMove == 'rock' && playerMove == 'scissors')
         || (computerMove == 'paper' && playerMove == 'rock')
         || (computerMove == 'scissors' && playerMove == 'paper')) {
-        printMessage('Player lose!');
+        printMessage('Player lose the round!');
     }
 }
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-let computerMove = getMoveName(randomNumber);
+function playGame(playerInput) {
+    clearMessages();
 
-printMessage('Computer move is: ' + computerMove);
+    let randomNumber = Math.floor(Math.random() * 3 + 1);
+    let computerMove = getMoveName(randomNumber);
+    printMessage('Computer move is: ' + computerMove);
 
-let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.');
-let playerMove = getMoveName(playerInput);
+    let playerMove = getMoveName(playerInput);
+    printMessage('Player move is: ' + playerMove);
 
-printMessage('Player move is: ' + playerMove);
+    displayResult(computerMove, playerMove);
+}
 
-displayResult(computerMove, playerMove);
+document.getElementById('play-rock').addEventListener('click', function () {
+    playGame(1);
+});
+
+document.getElementById('play-paper').addEventListener('click', function () {
+    playGame(2);
+});
+
+document.getElementById('play-scissors').addEventListener('click', function () {
+    playGame(3);
+});
