@@ -2,18 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Rock-paper-scissors</title>
 </head>
 <body>
-    <div class="container">
-        <div id="buttons"></div>
-        <button id="play-rock">Rock</button>
-        <button id="play-paper">Paper</button>
-        <button id="play-scissors">Scissors</button>
-        <div id="messages"></div>
-    </div>
+    <header class="splash">
+        <div class="splash-inner">
+            <div class="icon-container">
+                <img src="images/picture home.jpg" alt="Rock-paper-scissors icon">
+                <h1 class="page-title">Welcome to the game Rock Paper Scissors</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-section">
+            <div class="container">
+                <h2 class="section-title">Rules and how to play?</h2>
+                <h4>How to play?</h4>
+                <ul class="rules-list">
+                    <li>Rock beats Scissors.</li>
+                    <li>Scissors beats Paper.</li>
+                    <li>Paper beats Rock.</li>
+                    <li>If both players make the same move, the outcome is a draw.</li>
+                </ul>
+                <h4>Game Rules</h4>
+                <ul class="rules-list">
+                    <li>Select Your Move: Click on the button for Rock, Paper, or Scissors.</li>
+                    <li>Computer's Move: The computer will make a random selection.</li>
+                    <li>See the Result: The game will show your choice, the computer's choice, and the outcome of the round.</li>
+                    <li>Winning the Game: The first player to reach 3 points wins the game.</li>
+                </ul>
+
+            </div>
+        </section>
+
+        <section class="game-section">
+            <div class="container">
+                <h2 class="section-title">THE GAME</h2>
+                <div id="buttons">
+                    <button type="button" id="play-rock" class="btn move-btn">Rock</button>
+                    <button type="button" id="play-paper" class="btn move-btn">Paper</button>
+                    <button type="button" id="play-scissors" class="btn move-btn">Scissors</button>
+                </div>
+                <div id="messages" class="messages"></div>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="container">
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>Copyright &copy; Kris</p>
+        </div>
+    </footer>
 
     <script src="js/functions.js"></script>
-    <script src="js/script.js"></script>   
+    <script src="js/script.js"></script>
 </body>
 </html>

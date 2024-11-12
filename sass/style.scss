@@ -1,0 +1,78 @@
+/*colors*/
+$color-one: #ffffff;
+$color-two: #70d2e1;
+$color-three: #227c89;
+$color-four: #f5dcdc;
+$color-five: #ce5050;
+$color-six: #ed1212;
+$color-seven: #685151;
+$color-eight: #3b0e0e;
+$color-nine: #707070;
+
+/*global styles*/
+body {
+    margin: 0px;
+    background-color: $color-four;
+    font-style: $color-eight;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 10px;
+}
+
+.btn {
+    display: inline-block;
+    min-width: 160px;
+    min-height: 40px;
+    margin: 24px 6px;
+    background-color: $color-two;
+    border-radius: 3px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: $color-three;
+    color: $color-one;
+}
+
+/*splash*/
+.splash{
+    display: flex;
+}
+.splash-inner{
+    margin: auto;
+}
+.splash .page-title{
+    margin: 0;
+    font-size: 60px;
+}
+.splash img {
+    width: 100%;
+    height: auto;
+}
+
+/*section intro*/
+.intro-section ul{
+    padding: 0;
+    margin: 20px;
+    list-style:decimal;
+}
+.intro-section li{
+    margin-left: 20px;
+}
+
+/*section game*/
+
+/*section results*/
+
+/*footer*/
+.page-footer {
+    background-color: $color-eight;
+    color: $color-one;
+    padding: 8px;
+}
