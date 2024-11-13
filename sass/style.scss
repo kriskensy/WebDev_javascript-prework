@@ -40,29 +40,37 @@ body {
     color: $color-one;
 }
 
+.hidden-element {
+    visibility: hidden;
+}
+
 /*splash*/
-.splash{
+.splash {
     display: flex;
 }
-.splash-inner{
+
+.splash-inner {
     margin: auto;
 }
-.splash .page-title{
+
+.splash .page-title {
     margin: 0;
     font-size: 60px;
 }
+
 .splash img {
     width: 100%;
     height: auto;
 }
 
 /*section intro*/
-.intro-section ul{
+.intro-section ul {
     padding: 0;
     margin: 20px;
-    list-style:decimal;
+    list-style: decimal;
 }
-.intro-section li{
+
+.intro-section li {
     margin-left: 20px;
 }
 
