@@ -1,71 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <title>Rock-paper-scissors</title>
 </head>
+
 <body>
     <header class="splash">
-        <div class="splash-inner">
-            <div class="icon-container">
-                <img src="images/picture home.jpg" alt="Rock-paper-scissors icon">
-                <h1 class="page-title">Welcome to the game Rock Paper Scissors</h1>
-            </div>
+        <div class="splash-container">
+            <img src="images/picture home.jpg" alt="Rock-paper-scissors icon">
+            <h1 class="page-title">Welcome to the game Rock Paper Scissors</h1>
         </div>
     </header>
 
     <main>
         <section class="intro-section">
             <div class="container">
-                <h2 class="section-title">Rules and how to play?</h2>
-                <h4>How to play?</h4>
-                <ul class="rules-list">
-                    <li>Rock beats Scissors.</li>
-                    <li>Scissors beats Paper.</li>
-                    <li>Paper beats Rock.</li>
-                    <li>If both players make the same move, the outcome is a draw.</li>
-                </ul>
-                <h4>Game Rules</h4>
-                <ul class="rules-list">
-                    <li>Select Your Move: Click on the button for Rock, Paper, or Scissors.</li>
-                    <li>Computer's Move: The computer will make a random selection.</li>
-                    <li>See the Result: The game will show your choice, the computer's choice, and the outcome of the round.</li>
-                    <li>Winning the Game: The first player to reach 3 points wins the game.</li>
-                    <li>Restarting the Game: To start over, click the "New Game" button.</li>
-                    <li>Resetting Points: You can reset the score and start fresh anytime by clicking the "Reset Points" button.</li>
-                </ul>
+                <div class="intro-item">
+                    <h3 class="section-title">How to play?</h3>
+                    <ul class="rules-list">
+                        <li>Rock beats Scissors.</li>
+                        <li>Scissors beats Paper.</li>
+                        <li>Paper beats Rock.</li>
+                        <li>If both players make the same move, the outcome is a draw.</li>
+                    </ul>
+                </div>
+
+                <div class="intro-item">
+                    <h3 class="section-title">Game Rules</h3>
+                    <ul class="rules-list">
+                        <li>Select Your Move: Click on the button for Rock, Paper, or Scissors.</li>
+                        <li>Computer's Move: The computer will make a random selection.</li>
+                        <li>See the Result: The game will show your choice, the computer's choice, and the outcome of
+                            the round.</li>
+                        <li>Winning the Game: The first player to reach 3 points wins the game.</li>
+                        <li>Restarting the Game: To start over, click the "New Game" button.</li>
+                        <li>Resetting Points: You can reset the score and start fresh anytime by clicking the "Reset
+                            Points" button.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="game-section">
             <div class="container">
-                <h2 class="section-title">The Game</h2>
-                <div id="move-buttons">
-                    <button type="button" id="play-rock" class="btn move-btn">Rock</button>
-                    <button type="button" id="play-paper" class="btn move-btn">Paper</button>
-                    <button type="button" id="play-scissors" class="btn move-btn">Scissors</button>
-                </div>
-                <div id="set-buttons">
-                    <button type="button" id="new-game" class="btn active">New Game</button>
-                </div>
-                <div id="messages" class="messages"></div>
-            </div>
-        </section>
+                <div class="game-wrapper">
+                    <div id="game-item" class="game-item">
+                        <h2 class="section-title">The Game</h2>
+                        <div id="move-buttons" class="move-buttons">
+                            <button type="button" id="play-rock" class="btn move-btn">Rock</button>
+                            <button type="button" id="play-paper" class="btn move-btn">Paper</button>
+                            <button type="button" id="play-scissors" class="btn move-btn">Scissors</button>
+                        </div>
+                        <div id="messages" class="messages"></div>
+                    </div>
 
-        <section class="results-section">
-            <div class="container">
-                <h3>Computer points:  </h3>
-                <div id="computer-points" class="messages"></div>
-                <h3>Player points: </h3>
-                <div id="player-points" class="messages"></div>
-
-                <div id="computer-wins"></div>
-                <div id="player-wins"></div>
-
-                <div id="result-button">
-                    <button type="button" id="reset-points" class="btn">Reset points</button>
+                    <div id="winner-announcement" class="winner-announcement">
+                        <div id="computer-wins"></div>
+                        <div id="player-wins"></div>
+                    </div>
                 </div>
+
+                <div class="game-results">
+                    <div class="score-column">
+                        <div class="score-item">
+                            <h3>Computer points: </h3>
+                            <div id="computer-points" class="messages"></div>
+                        </div>
+
+                        <div class="score-item">
+                            <h3>Player points: </h3>
+                            <div id="player-points" class="messages"></div>
+                        </div>
+
+                    </div>
+                    <div class="set-game-buttons">
+                        <button type="button" id="new-game" class="btn">New Game</button>
+                        <button type="button" id="reset-points" class="btn">Reset points</button>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
@@ -79,4 +95,5 @@
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>

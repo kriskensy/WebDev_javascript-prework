@@ -66,7 +66,7 @@ document.getElementById('play-scissors').addEventListener('click', function () {
     playGame(3);
 });
 
-function gameReset() {
+function pointsCounterReset() {
     playerPointsCounter = 0;
     computerPointsCounter = 0;
 
@@ -75,31 +75,44 @@ function gameReset() {
 }
 
 document.getElementById('reset-points').addEventListener('click', function () {
-    gameReset();
+    pointsCounterReset();
     clearMessages();
 });
 
 document.getElementById('new-game').addEventListener('click', function () {
-    gameReset();
+    pointsCounterReset();
     clearMessages();
-    showMoveButtons();
+    // showMoveButtons();
+    hideGameWinner();
 });
 
-function hideMoveButtons(){
-    document.getElementById('move-buttons').classList.add('hidden-element');
+// function hideMoveButtons(){
+//     document.getElementById('move-buttons').classList.add('hidden-element');
+// }
+
+// function showMoveButtons(){
+//     document.getElementById('move-buttons').classList.remove('hidden-element');
+// }
+
+function showGameWinner() {
+    document.getElementById('game-item').classList.add('hidden-element');
+    document.getElementById('winner-announcement').classList.remove('hidden-element');
 }
 
-function showMoveButtons(){
-    document.getElementById('move-buttons').classList.remove('hidden-element');
+function hideGameWinner() {
+    document.getElementById('game-item').classList.remove('hidden-element');
+    document.getElementById('winner-announcement').classList.add('hidden-element');
 }
 
 function gameWinnerAnnouncement(computerPointsCounter, playerPointsCounter) {
     if (computerPointsCounter == 3) {
         document.getElementById('computer-wins').textContent = 'Computer won the game!';
-        hideMoveButtons()
+        // hideMoveButtons();
+        showGameWinner();
     } else if (playerPointsCounter == 3) {
         document.getElementById('player-wins').textContent = 'Player won the game!';
-        hideMoveButtons()
+        // hideMoveButtons();
+        showGameWinner();
     } else {
         document.getElementById('computer-wins').textContent = '';
         document.getElementById('player-wins').textContent = '';

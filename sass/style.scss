@@ -1,25 +1,24 @@
 /*colors*/
 $color-one: #ffffff;
-$color-two: #70d2e1;
-$color-three: #227c89;
-$color-four: #f5dcdc;
-$color-five: #ce5050;
-$color-six: #ed1212;
-$color-seven: #685151;
-$color-eight: #3b0e0e;
-$color-nine: #707070;
+$color-two: #264194;
+$color-three: #f4828b;
+$color-four: #e9fffe;
+$color-five: #3b0e0e;
+
 
 /*global styles*/
 body {
     margin: 0px;
     background-color: $color-four;
-    font-style: $color-eight;
+    font-style: $color-five;
     font-size: 20px;
 }
 
 .container {
+    display: flex;
     max-width: 1200px;
     padding: 10px;
+    margin: auto;
 }
 
 .btn {
@@ -28,6 +27,7 @@ body {
     min-height: 40px;
     margin: 24px 6px;
     background-color: $color-two;
+    color: $color-one;
     border-radius: 3px;
     border: none;
     text-align: center;
@@ -49,13 +49,16 @@ body {
     display: flex;
 }
 
-.splash-inner {
+.splash-container {
     margin: auto;
+    max-width: 100%;
 }
 
-.splash .page-title {
+.page-title {
     margin: 0;
     font-size: 60px;
+    line-height: 1.3;
+    text-align: center;
 }
 
 .splash img {
@@ -75,12 +78,79 @@ body {
 }
 
 /*section game*/
+.game-item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 10px;
+}
 
-/*section results*/
+.game-results {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-right: 0;
+    justify-content: space-between;
+}
+
+.score-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.game-results .messages {
+    font-size: 60px;
+}
+
+.set-game-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.score-column {
+    width: 50%;
+}
+
+.winner-announcement {
+    width: 100%;
+    height: auto;
+    align-items: center;
+}
 
 /*footer*/
 .page-footer {
-    background-color: $color-eight;
+    background-color: $color-two;
     color: $color-one;
-    padding: 8px;
+    margin: 0;
+    padding: 0;
 }
+
+//==============================
+// .game-section .container {
+//     border: #ed1212 solid;
+//     // justify-content: flex-end;
+// }
+
+// .game-wrapper {
+//     border: orange solid;
+// }
+
+// .game-item {
+//     border: rgb(27, 66, 195) solid;
+// }
+
+// .game-results {
+//     border: black solid;
+// }
+
+// .score-column {
+//     border: rgb(26, 182, 36) solid;
+// }
+
+// .set-game-buttons {
+//     border: yellow solid;
+// }
