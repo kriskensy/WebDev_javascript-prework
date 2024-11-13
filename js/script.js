@@ -1,3 +1,6 @@
+let playerPointsCounter = 0;
+let computerPointsCounter = 0;
+
 function getMoveName(moveId) {
     if (moveId == 1) {
         return 'rock';
@@ -22,10 +25,12 @@ function displayResult(computerMove, playerMove) {
         || (computerMove == 'paper' && playerMove == 'scissors')
         || (computerMove == 'scissors' && playerMove == 'rock')) {
         printMessage('Player won the round!');
+        playerPointsCounter++;
     } else if ((computerMove == 'rock' && playerMove == 'scissors')
         || (computerMove == 'paper' && playerMove == 'rock')
         || (computerMove == 'scissors' && playerMove == 'paper')) {
         printMessage('Player lose the round!');
+        computerPointsCounter++;
     }
 }
 
@@ -40,6 +45,13 @@ function playGame(playerInput) {
     printMessage('Player move is: ' + playerMove);
 
     displayResult(computerMove, playerMove);
+    console.log('player counter: ' + playerPointsCounter);
+    console.log('computer counter: ' + computerPointsCounter);
+
+    document.getElementById('computer-points').textContent = computerPointsCounter;
+    document.getElementById('player-points').textContent = playerPointsCounter;
+
+    gameWinnerAnnouncement(computerPointsCounter, playerPointsCounter);
 }
 
 document.getElementById('play-rock').addEventListener('click', function () {
@@ -53,3 +65,32 @@ document.getElementById('play-paper').addEventListener('click', function () {
 document.getElementById('play-scissors').addEventListener('click', function () {
     playGame(3);
 });
+
+function gameReset() {
+    playerPointsCounter = 0;
+    computerPointsCounter = 0;
+
+    document.getElementById('computer-points').textContent = computerPointsCounter;
+    document.getElementById('player-points').textContent = playerPointsCounter;
+}
+
+document.getElementById('reset-points', 'new-game').addEventListener('click', function () {
+    gameReset();
+    clearMessages();
+});
+
+document.getElementById('new-game').addEventListener('click', function () {
+    gameReset();
+    clearMessages();
+});
+
+function gameWinnerAnnouncement(computerPointsCounter, playerPointsCounter) {
+    if (computerPointsCounter == 3) {
+        document.getElementById('computer-wins').textContent = 'Computer won the game!';
+    } else if (playerPointsCounter == 3) {
+        document.getElementById('player-wins').textContent = 'Player won the game!';
+    } else{
+        document.getElementById('computer-wins').textContent = '';
+        document.getElementById('player-wins').textContent = '';
+    }
+}

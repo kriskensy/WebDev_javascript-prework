@@ -32,18 +32,20 @@
                     <li>Computer's Move: The computer will make a random selection.</li>
                     <li>See the Result: The game will show your choice, the computer's choice, and the outcome of the round.</li>
                     <li>Winning the Game: The first player to reach 3 points wins the game.</li>
+                    <li>Restarting the Game: To start over, click the "New Game" button.</li>
+                    <li>Resetting Points: You can reset the score and start fresh anytime by clicking the "Reset Points" button.</li>
                 </ul>
-
             </div>
         </section>
 
         <section class="game-section">
             <div class="container">
-                <h2 class="section-title">THE GAME</h2>
+                <h2 class="section-title">The Game</h2>
                 <div id="buttons">
                     <button type="button" id="play-rock" class="btn move-btn">Rock</button>
                     <button type="button" id="play-paper" class="btn move-btn">Paper</button>
                     <button type="button" id="play-scissors" class="btn move-btn">Scissors</button>
+                    <button type="button" id="new-game" class="btn">New Game</button>
                 </div>
                 <div id="messages" class="messages"></div>
             </div>
@@ -51,7 +53,17 @@
 
         <section class="results-section">
             <div class="container">
+                <h3>Computer points:  </h3>
+                <div id="computer-points" class="messages"></div>
+                <h3>Player points: </h3>
+                <div id="player-points" class="messages"></div>
 
+                <div id="computer-wins"></div>
+                <div id="player-wins"></div>
+
+                <div id="result-button">
+                    <button type="button" id="reset-points" class="btn">Reset points</button>
+                </div>
             </div>
         </section>
     </main>
