@@ -41,7 +41,7 @@ body {
 }
 
 .hidden-element {
-    visibility: hidden;
+    display: none;
 }
 
 /*splash*/
@@ -84,6 +84,7 @@ body {
     text-align: center;
     margin-left: 0;
     margin-right: 10px;
+    position: relative;
 }
 
 .game-results {
@@ -118,7 +119,12 @@ body {
 .winner-announcement {
     width: 100%;
     height: auto;
-    align-items: center;
+    text-align: center;
+    color: $color-five;
+    font-size: 60px;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 /*footer*/
@@ -128,29 +134,3 @@ body {
     margin: 0;
     padding: 0;
 }
-
-//==============================
-// .game-section .container {
-//     border: #ed1212 solid;
-//     // justify-content: flex-end;
-// }
-
-// .game-wrapper {
-//     border: orange solid;
-// }
-
-// .game-item {
-//     border: rgb(27, 66, 195) solid;
-// }
-
-// .game-results {
-//     border: black solid;
-// }
-
-// .score-column {
-//     border: rgb(26, 182, 36) solid;
-// }
-
-// .set-game-buttons {
-//     border: yellow solid;
-// }

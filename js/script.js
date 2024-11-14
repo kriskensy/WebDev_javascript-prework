@@ -1,5 +1,6 @@
 let playerPointsCounter = 0;
 let computerPointsCounter = 0;
+let pointsToWinTheGame = 3;
 
 function getMoveName(moveId) {
     if (moveId == 1) {
@@ -15,7 +16,6 @@ function getMoveName(moveId) {
 }
 
 function displayResult(computerMove, playerMove) {
-    //console.log('Computer move: ' + computerMove + ',  players move: ' + playerMove);
 
     if ((computerMove == 'rock' && playerMove == 'rock')
         || (computerMove == 'paper' && playerMove == 'paper')
@@ -45,8 +45,6 @@ function playGame(playerInput) {
     printMessage('Player move is: ' + playerMove);
 
     displayResult(computerMove, playerMove);
-    //console.log('player counter: ' + playerPointsCounter);
-    //console.log('computer counter: ' + computerPointsCounter);
 
     document.getElementById('computer-points').textContent = computerPointsCounter;
     document.getElementById('player-points').textContent = playerPointsCounter;
@@ -82,17 +80,8 @@ document.getElementById('reset-points').addEventListener('click', function () {
 document.getElementById('new-game').addEventListener('click', function () {
     pointsCounterReset();
     clearMessages();
-    // showMoveButtons();
     hideGameWinner();
 });
-
-// function hideMoveButtons(){
-//     document.getElementById('move-buttons').classList.add('hidden-element');
-// }
-
-// function showMoveButtons(){
-//     document.getElementById('move-buttons').classList.remove('hidden-element');
-// }
 
 function showGameWinner() {
     document.getElementById('game-item').classList.add('hidden-element');
@@ -105,13 +94,11 @@ function hideGameWinner() {
 }
 
 function gameWinnerAnnouncement(computerPointsCounter, playerPointsCounter) {
-    if (computerPointsCounter == 3) {
+    if (computerPointsCounter == pointsToWinTheGame) {
         document.getElementById('computer-wins').textContent = 'Computer won the game!';
-        // hideMoveButtons();
         showGameWinner();
-    } else if (playerPointsCounter == 3) {
+    } else if (playerPointsCounter == pointsToWinTheGame) {
         document.getElementById('player-wins').textContent = 'Player won the game!';
-        // hideMoveButtons();
         showGameWinner();
     } else {
         document.getElementById('computer-wins').textContent = '';
