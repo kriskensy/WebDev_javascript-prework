@@ -17,18 +17,14 @@ function getMoveName(moveId) {
 
 function displayResult(computerMove, playerMove) {
 
-    if ((computerMove == 'rock' && playerMove == 'rock')
-        || (computerMove == 'paper' && playerMove == 'paper')
-        || (computerMove == 'scissors' && playerMove == 'scissors')) {
+    if ((computerMove == playerMove)) {
         printMessage('Draw!');
     } else if ((computerMove == 'rock' && playerMove == 'paper')
         || (computerMove == 'paper' && playerMove == 'scissors')
         || (computerMove == 'scissors' && playerMove == 'rock')) {
         printMessage('Player won the round!');
         playerPointsCounter++;
-    } else if ((computerMove == 'rock' && playerMove == 'scissors')
-        || (computerMove == 'paper' && playerMove == 'rock')
-        || (computerMove == 'scissors' && playerMove == 'paper')) {
+    } else {
         printMessage('Player lose the round!');
         computerPointsCounter++;
     }
